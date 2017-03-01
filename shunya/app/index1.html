@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#303F9F">
+<meta name="msapplication-TileColor" content="#3372DF">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <iron-meta key="domain" value="www.cloudstitch.com"></iron-meta>
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@cloudstitch">
+<meta name="og:site_name" content="Cloudstitch">
+<meta name="application-name" content="Cloudstitch">
+<meta name="apple-mobile-web-app-title" content="Cloudstitch">
+<meta name="twitter:title" content="Cloudstitch">
+<meta name="og:title" content="Cloudstitch">
+<title>Silencio</title>
+<meta name="description" content="Power your web content with Google Docs and Spreadsheets">
+<meta name="twitter:description" content="Power your web content with Google Docs and Spreadsheets">
+<meta name="og:description" content="Power your web content with Google Docs and Spreadsheets">
+<link rel="import" href="//components.cloudstitch.com/editor/17/elements/elements-outside.vulcanized.html">
+<link rel="stylesheet" href="//components.cloudstitch.com/editor/17/styles/main.css">
+<script src="//components.cloudstitch.com/editor/17/bower_components/webcomponentsjs/webcomponents.min.js"></script>
+<script src="//components.cloudstitch.com/editor/17/bower_components/page/page.js"></script>
+<style>
+    #headerContainer {
+        z-index: 900 
+    }
+</style>
+<script src="https://static.cloudstitch.io/js/lib/jquery-2.1.0.min.js"></script>
+<script src="https://static.cloudstitch.io/js/lib/jquery-ui-1.10.4.custom.min.js"></script>
+<style>
+    html, body {
+        height: 100%;
+    }
+    body {
+        position: relative;
+    }
+    .affix {
+    position: fixed;
+    }
+</style>
+<style>
+    .collection-block {
+        background: #ebeff2; /* fallback for old browsers */
+        background: -webkit-linear-gradient(to bottom, #ebeff2 , #fff); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to bottom, #ebeff2 , #fff); 
+    }    
+
+    h3.title {
+        font-size: 54px;
+        line-height: 58px;
+        letter-spacing: -2px;
+        text-align: center;
+        font-weight: 200;
+        margin: 90px auto 20px auto;
+    }
+
+    h3.header {
+        text-align: left;
+        font-weight: 600;
+        font-size: 2.3em;
+        letter-spacing: -2px;
+        margin: 90px auto 10px auto;
+    }
+
+    p.detail {
+        margin-top: 0;
+        font-size: 1.5em;
+        font-weight: 400;
+    }
+
+    @media (max-width: 480px){
+        h3.title {
+            margin-top: 60px;
+        }
+    }
+
+    h4.subtitle {
+        font-size: 24px;
+        line-height: 30px;
+        margin: -10px 0 20px;
+        letter-spacing: -1px;
+        text-align: center;
+        font-weight: 400;
+    }        
+
+    .collection-block h2 {
+        text-align: center;
+    }
+
+    .full-img {
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .integrates-image {
+        max-width: 800px;
+        height: 200px;
+        margin-left: auto;
+        margin-right: auto;
+        background-image: url(https://static.cloudstitch.io/img/explain/supported-deploy-targets.png);
+        display: block;
+    }  
+
+    .whitebg {
+        background-color: white;      
+    }
+
+    .deploy-img {
+        margin-top: 20px;
+        height: 250px;
+        background-image: url(https://static.cloudstitch.io/img/explain/deploy.png);      
+    }
+
+    .customize-img {
+        margin-top: 20px;
+        height: 250px;
+        background-image: url(https://static.cloudstitch.io/img/explain/customize.png);      
+    }
+
+    .form-img {
+        margin-top: 20px;
+        height: 250px;
+        background-image: url(https://static.cloudstitch.io/img/explain/cloudstitch-idea.png);      
+    }
+
+    .features-block iron-icon {
+        width: 1.2em;
+        height: 1.2em;
+        margin-right: 0.2em;
+        margin-top: -5px;
+    }
+
+    .features-block h5 {
+        margin-bottom: 0;
+        font-size: 1.5em;
+    }
+
+    .features-block p {
+        margin-left: 0.3em;
+        margin-right: 1em;
+        margin-top: 5px;
+    }
+    @media (max-width: 480px){
+        .integrates-image {
+            height: 200px;
+        }
+    }
+
+</style>
+</head>
+<body unresolved="" class="cs-page cs-bg-drab">
+    <style>
+        h1.title {
+            font-weight: 200;
+            margin-top: 50px;
+            text-align: center;
+            font-size: 4em;
+            margin-bottom: 0;
+        }
+
+        h2.subtitle {
+            font-weight: normal;
+            margin-top: 10px;
+            padding-bottom: 60px;
+        }
+
+        .header-9-sub {
+            color: white;
+            text-align: center;
+        }
+
+        .conference-schedule-feature {
+            -webkit-touch-callout: none; /* iOS Safari */
+            -webkit-user-select: none;   /* Chrome/Safari/Opera */
+            -khtml-user-select: none;    /* Konqueror */
+            -moz-user-select: none;      /* Firefox */
+            -ms-user-select: none;       /* Internet Explorer/Edge */
+            user-select: none;
+            background: 50% 50% no-repeat;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            background-image: url('https://static.cloudstitch.io/img/conference-schedule/background-image-xs.png');
+            background-position: left 0px top 0px;
+        }
+
+        @media (max-width: 767px) {
+            header {
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;`
+                box-sizing: border-box;
+            }
+        }
+        .conference-schedule-feature .browser {
+            background-image: url(https://static.cloudstitch.io/img/browser.png);
+            background-repeat: no-repeat;
+            height: 313px;
+        }
+
+        .conference-schedule-feature .megaconf {
+            background-color: white;
+            border-left: 1px solid #eee;
+            border-right: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+            border-bottom-left-radius: 3px;
+            border-bottom-right-radius: 3px;
+            color: #333;
+            -webkit-box-shadow: 0px 6px 19px 8px rgba(0,0,0,0.66);
+            -moz-box-shadow: 0px 6px 19px 8px rgba(0,0,0,0.66);
+            box-shadow: 0px 6px 19px 8px rgba(0,0,0,0.66);
+        }    
+
+.conference-schedule-feature .megaconf h4 {  
+  font-style: italic;
+  border-bottom: 1px solid rgba(200,200,200,0.8)
+}
+.conference-schedule-feature .header h5 {
+  margin-top: 0;
+  line-height: 50px;
+  font-size: 20px;
+}
+
+.conference-schedule-feature .header {
+  height: 50px;
+  width: 100%;
+  display: block;
+  background-color: white;
+  background-image: url("https://static.cloudstitch.io/img/entry/gsheet-block.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: #efefef;
+  -webkit-box-shadow: 0px 2px 19px -1px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 2px 19px -1px rgba(0,0,0,0.75);
+  box-shadow: 0px 2px 19px -1px rgba(0,0,0,0.75);
+  -webkit-border-radius: 3px;
+}
+
+.conference-schedule-feature .sheet {
+  background-color: white;
+  display: block;
+  width: 100%;
+}
+.conference-schedule-feature table {
+  width: 100%;
+  font-size: 16px;
+  text-align: left;
+}
+
+
+.conference-schedule-feature table th {
+  padding: 4px;
+  background-color: #fafafa;
+}
+
+.conference-schedule-feature table td {
+  padding: 4px;
+}
+
+.conference-schedule-feature tr.unreveal {
+  margin-top: -20px;
+  opacity: 0;
+  background-color: red;
+}
+
+.conference-schedule-feature tr.reveal {
+  opacity: 1;
+  margin-top: 0px;
+  background-color: white;
+}   
+
+.conference-schedule-feature th.one, .conference-schedule-feature td.one, .conference-schedule-feature th.two, .conference-schedule-feature td.two {
+  border-right: 2px solid #ccc;
+}
+.conference-schedule-feature tr.unselected {
+  background-color: white;
+}
+.conference-schedule-feature tr.selected {
+  background-color: red;
+}
+table{border-collapse:collapse;border-spacing:0}
+
+
+.hand-phone {
+  background-repeat: no-repeat;
+  background-size: 374px 350px;
+  height: 320px;
+  background-position: top left;
+  background-image: url('https://static.cloudstitch.io/img/conference-schedule/hand-phone-mini.png') !important;
+}
+
+.hand-phone .schedule {
+  margin: 67px 0 0 59px;
+  width: 227px;
+  height: 308px;
+  overflow: hidden;
+}
+
+@media (max-width: 480px) {
+  .hand-phone {
+    height: 267px;
+  }
+}
+
+.hand-phone h3 {
+  font-size: 20px;
+  line-height: 50px;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  background-color: #777;
+  font-weight: 100;
+  text-align: center;
+}
+
+.hand-phone .time {
+  font-size: 24px;
+  font-weight: 100;
+  color: black;     
+  vertical-align: top;   
+  text-align: right;
+}
+
+.hand-phone .title {
+  font-size: 14px;
+  font-weight: bold;
+  float: left;
+  display: block;
+  color: black;
+  margin-left: 10px;
+}
+
+.hand-phone .speaker {
+  font-size: 14px;
+  font-weight: 200;
+  float: left;
+  margin-left: 10px;
+  display: block;
+  clear: both;
+  color: black;
+}
+
+.hand-phone .unreveal {
+  opacity: 0;
+}
+
+.hand-phone .reveal {
+  opacity: 1;
+}
+</style>
+<div class="conference-schedule-feature">
+    <stitch-toolbar logo transparent style="z-index: 1000"></stitch-toolbar>
+    <section class="header-9-sub">
+        <div class="csrow">
+            <div class="cscol12">
+                <h1 class="title">SILENCIO</h1>
+                <h2 class="subtitle">GO NOISELESS</h2>
+            </div>
+        </div>
+        <div class="csrow">
+            <div class="cs-front-sheet">
+                <div style="max-width: 100%; width:500px; height: 300px; margin: 20px auto 0 auto">
+                    <img src="https://static.cloudstitch.io/img/entry/browser-bar.png" style="width: 100%">
+                    <div style="display: block; margin-left: auto; margin-right:auto;margin-top:-5px" class="megaconf">
+                        <div class="header">
+                            <h5>Conference Schedule</h5>
+                        </div>
+                       
+                </div>
+        </div>
+            </div>
+    </div>
+     </section>
+    </div>
+   </body></html>
